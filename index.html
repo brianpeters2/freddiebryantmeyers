@@ -30,6 +30,23 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
         }
+          .video-section {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            gap: 10px;
+        }
+        .video {
+            min-width: 300px;
+            flex: 0 0 auto;
+        }
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
          h1 {
             font-size: 5em;
             margin-top: 0;
@@ -41,23 +58,42 @@
             font-size: 2em;
             margin-top: 0;
             padding: 10px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+            text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 0.5); /* Add shadow for readability */
+            color: red;
         }
            p {
             font-size: 2em;
-            text-align: top;
-            margin-top: 20%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+            margin-top: 0;
+            padding: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 0.5); /* Add shadow for readability */
+            color: red;
         }
         
         
     </style>
 </head>
 <body>
+        <div class="container">
+        <div class="text-background">
     <h1>Freddie Bryant Meyers</h1>
 
         
    <h2>Music To Listen</h2>
+              </div>
+
+        <div class="video-section">
+            <div class="video">
+                <iframe src="https://www.youtube.com/watch?v=DZ2YtylJZ5M" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/watch?v=PWQoJU9pfRU" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/watch?v=90PX8tEIKl0" allowfullscreen></iframe>
+            </div>
+           
+        </div>
+    </div>
 
     <p>This is a sample text on my page with a background color for better readability.</p>
         <p>Here is some more text aligned from the top working downwards.</p>
