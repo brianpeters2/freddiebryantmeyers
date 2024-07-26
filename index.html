@@ -72,6 +72,30 @@
             text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 0.5); /* Add shadow for readability */
             color: red;
         }
+          /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            h2, p {
+                font-size: 1.5em;
+            }
+            .video iframe {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2, p {
+                font-size: 1em;
+            }
+            .video iframe {
+                height: 100px;
+            }
+        }
         
         
     </style>
