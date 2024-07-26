@@ -19,6 +19,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             color: white;
+            text-align: center; /* Center text */
 }
          .container {
             padding: 20px;
@@ -32,11 +33,14 @@
         }
           .video-section {
             display: flex;
+            justify-content: center; /* Center videos horizontally */
             overflow-x: auto;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             gap: 10px;
+            max-width: 1000px; /* Center content by setting a max width */
+            margin: 0 auto; /* Center horizontally */
         }
         .video {
             min-width: 300px;
