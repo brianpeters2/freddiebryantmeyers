@@ -73,6 +73,19 @@
             text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 0.5); /* Add shadow for readability */
             color: red;
         }
+          .image-link {
+            display: inline-block;
+            margin: 10px;
+        }
+        .image-link img {
+            width: 200px; /* Adjust the size of the image */
+            height: auto;
+            border: none;
+            transition: transform 0.3s; /* Smooth zoom effect */
+        }
+        .image-link img:hover {
+            transform: scale(1.1); /* Zoom in on hover */
+        }
           /* Media queries for responsive design */
         @media (max-width: 768px) {
             h1 {
@@ -124,7 +137,18 @@
      </div>
     </div>
 
-    <p>This is a sample text on my page with a background color for better readability.</p>
+    <p>CLICK ON THE IMAGES FOR THE LINK</p>
+    <div>
+        <a href="https://example.com/page1" class="image-link">
+            <img src="image1.jpg" alt="Description of Image 1">
+        </a>
+        <a href="https://example.com/page2" class="image-link">
+            <img src="image2.jpg" alt="Description of Image 2">
+        </a>
+        <a href="https://example.com/page3" class="image-link">
+            <img src="image3.jpg" alt="Description of Image 3">
+        </a>
+    </div>
         <p>Here is some more text aligned from the top working downwards.</p>
 </body>
 </html>
