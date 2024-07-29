@@ -20,18 +20,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FM213 Music Impulse</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file if you have one -->
+    <style>
+  body {
+            margin: 0;
+            padding: 200px;
+            font-family: Bernard MT Condensed, sans-serif;
+            background-image: url('IMG_1539.PNG');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center; /* Center text */
+}
+         .container {
+            padding: 20px;
+                    }
+        .text-background {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+        }
+          .video-section {
+            display: flex;
+            justify-content: center; /* Center videos horizontally */
+            overflow-x: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            gap: 10px;
+            max-width: 1000px; /* Center content by setting a max width */
+            margin: 0 auto; /* Center horizontally */
+            flex-wrap: wrap; /* Allow wrapping of videos */
+        }
+           .toc {
+            margin-bottom: 20px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: yellow;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        .video {
+            min-width: 300px;
+            flex: 0 0 auto;
+        }
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+         h1 {
+            font-size: 5em;
+            margin-top: 0;
+            padding: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 0.5); /* Add shadow for readability */
+            color: red;
+        }
+           h2 {
+            font-size: 2em;
+            margin-top: 0;
+            padding: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 0.5); /* Add shadow for readability */
+            color: red;
+        }
+         h3 {
+            font-size: 2em;
+            margin-top: 0;
+            padding: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 0.5); /* Add shadow for readability */
+            color: Yellow;
+        }
+           p {
+            font-size: 2em;
+            margin-top: 0;
+            padding: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 0.5); /* Add shadow for readability */
+            color: red;
+        }
+          .image-link {
+            display: inline-block;
+            margin: 10px;
+        }
+        .image-link img {
+            width: 200px; /* Adjust the size of the image */
+            height: auto;
+            border: none;
+            transition: transform 0.3s; /* Smooth zoom effect */
+        }
+        .image-link img:hover {
+            transform: scale(1.1); /* Zoom in on hover */
+        }
+          /* Media queries for responsive design */
+        @media (max-width: 768px) {
+             <style>
+        * {
+            box-sizing: border-box;
+        }
+            h1 {
+                font-size: 3em;
+                font-family: Arial, sans-serif;
+            }
+            h2, h3, p {
+                font-size: 1.5em;
+                font-family: Arial, sans-serif;
+            }
+            .video iframe {
+                height: 150px;
+            }
+            .container {
+                padding: 10px; /* Adjust padding for smaller screens */
+                 box-sizing: border-box;
+            }
+            .text-background {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+            }
+            .video-section {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+            .image-link {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .image-link img {
+            width: 100px; /* Adjust the size of the image */
+            height: auto;
+            border: none;
+            transition: transform 0.3s; /* Smooth zoom effect */
+        }
+
+        .image-link img:hover {
+            transform: scale(1.1); /* Zoom in on hover */
+        }
+        }
+
+        @media (max-width: 480px) {
+             <style>
+        * {
+            box-sizing: border-box;
+        }
+            h1 {
+                font-size: 2em;
+                font-family: Arial, sans-serif;
+            }
+            h2, h3, p {
+                font-size: 1em;
+                font-family: Arial, sans-serif;
+            }
+            .video iframe {
+                height: 100px;
+            }
+            .container {
+                padding: 5px; /* Adjust padding for smaller screens */
+                box-sizing: border-box;
+            }
+            .text-background {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+            }
+            .video-section {
+                padding: 5px; /* Adjust padding for smaller screens */
+            }
+            .image-link {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .image-link img {
+            width: 50px; /* Adjust the size of the image */
+            height: auto;
+            border: none;
+            transition: transform 0.3s; /* Smooth zoom effect */
+        }
+
+        .image-link img:hover {
+            transform: scale(1.1); /* Zoom in on hover */
+        }
+        }
+        
+        
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to FM213 Music Impulse</h1>
-    </header>
-    <main>
-        <p>This is the content for the FM213 Music Impulse page.</p>
-        <!-- Add more content as needed -->
-    </main>
-    <footer>
-        <p>&copy; 2024 Freddie Bryant Meyers</p>
-    </footer>
+        <div class="container">
+        <div class="text-background">
+    <h1>Freddie Bryant Meyers</h1>
+             <h3>Table of Contents</h3>
+    <div class="toc">
+        <ul>
+            <li><a href="#Music To Listen">Music To Listen</a></li>
+            <li><a href="#chapter1">Chapter 1: Getting Started</a></li>
+            <li><a href="#chapter2">Chapter 2: HTML Basics</a></li>
+            <li><a href="#chapter3">Chapter 3: CSS Basics</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="fm213-music-impulse.html">FM213 Music Impulse</a></li>
+        </ul>
+    </div>
+     <section id="Music To Listen">
+         <h2>Music To Listen</h2>
+              </div>
+        <div class="video-section">
+            <div class="video">
+                
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/DZ2YtylJZ5M?si=ng_HMoG8QWaTK9Cz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/PWQoJU9pfRU?si=4S9BtKuwiFlg5U94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>>
+            </div>
+            <div class="video">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/90PX8tEIKl0?si=rqfpbAwphaC3PVGL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+           </div>
+      </section>
+    <div class="container">
+   <div class="text-background">
+       <div class="text-background">
+    <h2>CLICK ON THE IMAGES FOR THE LINK</h2>
+    <div>
+        <a href="https://www.instagram.com/freddiebryantmeyers/" target="_blank" class="image-link">
+            <img src="Picture Logos/instagram-photo.png" alt="Description of Image 1">
+        </a>
+        <a href="https://www.tiktok.com/@freddiebryantmeyers" target="_blank" class="image-link">
+            <img src="Picture Logos/tiktok-logo.png" alt="Description of Image 2">
+        </a>
+        <a href="https://www.twitch.tv/freddiebryantmeyers" target="_blank" class="image-link">
+            <img src="Picture Logos/TwitchLogo.png" alt="Description of Image 3">
+        </a>
+        <a href="https://www.youtube.com/channel/UCJC39fRqXpngLFFH1quNnDg" target="_blank" class="image-link">
+            <img src="Picture Logos/YouTubeLogo.png" alt="Description of Image 3">
+        </a>
+    </div>
+       
 </body>
 </html>
