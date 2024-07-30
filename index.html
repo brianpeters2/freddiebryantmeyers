@@ -7,19 +7,26 @@
     <style>
         body {
             margin: 0;
-            padding: 200px;
+            padding: 0px;
             font-family: Bernard MT Condensed, sans-serif;
             background-image: url('IMG_1539.PNG');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
+            height: auto; /* Change from 100vh to auto */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
             text-align: center; /* Center text */
+             overflow-x: hidden; /* Prevent horizontal scroll */
+}
+        .fixed-header {
+    position: fixed; /* Or absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
 }
          .container {
             padding: 20px;
@@ -111,7 +118,7 @@
         }
           /* Media queries for responsive design */
         @media (max-width: 768px) {
-             <style>
+             
         * {
             box-sizing: border-box;
         }
