@@ -60,16 +60,30 @@
     margin: 0 auto;
 }
 
-           .toc {
-            margin-bottom: 20px;
-        }
-        .toc a {
-            text-decoration: none;
-            color: yellow;
-        }
-        .toc a:hover {
-            text-decoration: underline;
-        }
+         .toc {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;    /* Optional: center the links */
+    gap: 10px;              /* Spacing between links */
+}
+
+.toc a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 1.8em;       /* Makes the links larger */
+    padding: 10px 20px;     /* Adds space around the link */
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: gives it a blocky background */
+    border-radius: 8px;     /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 0, 0.2); /* Lighter yellow hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
         section {
             margin-bottom: 50px;
         }
