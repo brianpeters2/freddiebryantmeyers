@@ -22,6 +22,13 @@
             text-align: center; /* Center text */
              overflow-x: hidden; /* Prevent horizontal scroll */
 }
+        .site-logo {
+    width: 350px;       /* Resize logo for desktop */
+    height: auto;
+    max-width: 90vw;    /* Makes it responsive on smaller screens */
+    margin-top: 20px;
+}
+
         .fixed-header {
     position: fixed; /* Or absolute */
     top: 0;
@@ -217,7 +224,8 @@
 <body>
         <div class="container">
         <div class="text-background">
-    <h1>Freddie Bryant Meyers</h1>
+    <img src="fbmweblogo.png" alt="Freddie Bryant Meyers Logo" class="site-logo">
+
              <h3>Table of Contents</h3>
     <div class="toc">
         <ul>
