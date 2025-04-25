@@ -48,18 +48,18 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
         }
-          .video-section {
-            display: flex;
-            justify-content: center; /* Center videos horizontally */
-            overflow-x: auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            gap: 10px;
-            max-width: 1000px; /* Center content by setting a max width */
-            margin: 0 auto; /* Center horizontally */
-            flex-wrap: wrap; /* Allow wrapping of videos */
-        }
+      .video-section {
+    display: flex;
+    flex-direction: column; /* Stack videos vertically */
+    align-items: center;    /* Center the videos horizontally */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    gap: 20px; /* space between videos */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
            .toc {
             margin-bottom: 20px;
         }
