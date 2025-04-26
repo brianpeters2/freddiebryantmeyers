@@ -28,6 +28,38 @@
     max-width: 90vw;    /* Makes it responsive on smaller screens */
     margin-top: 20px;
 }
+        /* tab code */
+        .tab-container {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.tab-buttons {
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tab-btn:hover, .tab-btn.active {
+  background-color: #0056b3;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active-tab {
+  display: block;
+} /* end of tabs code */
 
         .fixed-header {
     position: fixed; /* Or absolute */
@@ -239,8 +271,50 @@
         <div class="container">
         <div class="text-background">
     <img src="fbmweblogo.png" alt="Freddie Bryant Meyers Logo" class="site-logo">
+ </div>
+            <script>
+function openTab(tabId) {
+  // Hide all tab content
+  var tabs = document.getElementsByClassName('tab-content');
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove('active-tab');
+  }
 
-       
+  // Remove 'active' class from all buttons
+  var buttons = document.getElementsByClassName('tab-btn');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove('active');
+  }
+
+  // Show selected tab
+  document.getElementById(tabId).classList.add('active-tab');
+  
+  // Add 'active' class to the clicked button
+  event.currentTarget.classList.add('active');
+}
+</script>
+       <div class="tab-container">
+  <div class="tab-buttons">
+    <button class="tab-btn active" onclick="openTab('tab1')">Tab 1</button>
+    <button class="tab-btn" onclick="openTab('tab2')">Tab 2</button>
+    <button class="tab-btn" onclick="openTab('tab3')">Tab 3</button>
+  </div>
+
+  <div id="tab1" class="tab-content active-tab">
+    <h2>Tab 1 Content</h2>
+    <p>This is the first tab.</p>
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <h2>Tab 2 Content</h2>
+    <p>This is the second tab.</p>
+  </div>
+
+  <div id="tab3" class="tab-content">
+    <h2>Tab 3 Content</h2>
+    <p>This is the third tab.</p>
+  </div>
+</div>
    
             
         
