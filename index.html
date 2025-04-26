@@ -99,7 +99,13 @@
     align-items: center;    /* Optional: center the links */
     gap: 10px;              /* Spacing between links */
 }
-
+ (min-width: 769px) {
+    .toc {
+        flex-direction: row; /* On desktop: horizontal */
+        justify-content: center; /* Center the links horizontally */
+    }
+}
+        
 .toc a {
     text-decoration: none;
     color: yellow;
