@@ -23,22 +23,17 @@
              overflow-x: hidden; /* Prevent horizontal scroll */
 }
         .site-logo {
- position: fixed;
-    top: 20px;       /* Adjust distance from top */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    width: 350px;
+    width: 350px;       /* Resize logo for desktop */
     height: auto;
-    max-width: 90vw;
-    margin-top: 0;
+    max-width: 90vw;    /* Makes it responsive on smaller screens */
+    margin-top: 20px;
 }
         /* tab code */
         .tab-container {
-position: fixed;
-    top: 120px;      /* Adjust based on your logo height */
-    width: 100%;
-    text-align: center;
-    background-size: inherit;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  background-size: inherit; /* Inherit background size from body */
 }
 
 .tab-buttons {
@@ -79,7 +74,6 @@ background-size: inherit; /* Make sure tab content inherits the background size 
             max-width: 1200px; /* Added max-width to avoid overflow */
             width: 100%;
             box-sizing: border-box;
-             margin-top: 160px; /* Make room for the fixed logo and tabs */
                     }
         .text-background {
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
@@ -394,5 +388,3 @@ function openTab(tabId) {
    
 </body>
 </html>
-
-
