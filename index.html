@@ -23,17 +23,22 @@
              overflow-x: hidden; /* Prevent horizontal scroll */
 }
         .site-logo {
-    width: 350px;       /* Resize logo for desktop */
+ position: fixed;
+    top: 20px;       /* Adjust distance from top */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 350px;
     height: auto;
-    max-width: 90vw;    /* Makes it responsive on smaller screens */
-    margin-top: 20px;
+    max-width: 90vw;
+    margin-top: 0;
 }
         /* tab code */
         .tab-container {
-  margin-top: 20px;
-  width: 100%;
-  text-align: center;
-  background-size: inherit; /* Inherit background size from body */
+position: fixed;
+    top: 120px;      /* Adjust based on your logo height */
+    width: 100%;
+    text-align: center;
+    background-size: inherit;
 }
 
 .tab-buttons {
@@ -74,6 +79,7 @@ background-size: inherit; /* Make sure tab content inherits the background size 
             max-width: 1200px; /* Added max-width to avoid overflow */
             width: 100%;
             box-sizing: border-box;
+             margin-top: 160px; /* Make room for the fixed logo and tabs */
                     }
         .text-background {
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
