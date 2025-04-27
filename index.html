@@ -13,7 +13,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: auto; /* Change from 100vh to auto */
+            height: 100vh; /* Change from 100vh to auto */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -33,6 +33,7 @@
   margin-top: 20px;
   width: 100%;
   text-align: center;
+  background-size: inherit; /* Inherit background size from body */
 }
 
 .tab-buttons {
@@ -59,6 +60,7 @@
 
 .tab-content.active-tab {
   display: block;
+background-size: inherit; /* Make sure tab content inherits the background size */
 } /* end of tabs code */
 
         .fixed-header {
