@@ -23,10 +23,14 @@
              overflow-x: hidden; /* Prevent horizontal scroll */
 }
         .site-logo {
-    width: 350px;       /* Resize logo for desktop */
+ position: fixed;       /* Fixes the logo to the top of the page */
+    top: 0;                /* Aligns it at the very top */
+    left: 50%;             /* Centers it horizontally */
+    transform: translateX(-50%); /* Center it using transform */
+    width: 350px;          /* Resize logo */
     height: auto;
-    max-width: 90vw;    /* Makes it responsive on smaller screens */
-    margin-top: 20px;
+    z-index: 10;           /* Ensures it stays above other content */
+    margin-top: 20px;      /* Optional: adjust for padding */
 }
         /* tab code */
         .tab-container {
