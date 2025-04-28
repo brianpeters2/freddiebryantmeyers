@@ -101,7 +101,7 @@ background-size: inherit; /* Make sure tab content inherits the background size 
     align-items: center;    /* Optional: center the links */
     gap: 10px;              /* Spacing between links */
 }
- (min-width: 769px) {
+ @media (min-width: 769px) {
     .toc {
         flex-direction: row; /* On desktop: horizontal */
         justify-content: center; /* Center the links horizontally */
@@ -179,7 +179,12 @@ background-size: inherit; /* Make sure tab content inherits the background size 
         }
           /* Media queries for responsive design */
         @media (max-width: 768px) {
-             
+             .video iframe {
+        width: 100%;
+        height: auto; /* allow the height to adjust naturally */
+        aspect-ratio: 16/9; /* keep correct video shape */
+    }
+}
         * {
             box-sizing: border-box;
         }
@@ -238,6 +243,10 @@ background-size: inherit; /* Make sure tab content inherits the background size 
                 font-size: 1em;
                 font-family: Arial, sans-serif;
             }
+            .video {
+    min-width: 800px;
+    width: 100%;
+}
             .video iframe {
                 height: 180px;
             }
